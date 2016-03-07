@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aministrador de Tareas</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body ng-app="appTareas">
+	<div class="page-hader">
+		<h1>Administrador de Tareas</h1>
+	</div>
+	<div class="container col-md-4 col-md-offset-4">
+		<form action="">
+			<h1>Edita la tarea</h1>
+			<div class="has-feedback">
+				<input type="text" class="form-control" placeholder="Tarea a realizar" ng-model="tarea.nombre" value="{{ tarea.nombre }}"></input>
+				<span class="glyphicon glyphicon-tasks form-control-feedback"></span>
+			</div>
+
+			<div>
+				<span class="glyphicon glyphicon-time"></span>&nbsp;<span class="lead prioridad">Elige la prioridad: </span>
+				<label class="radio-inline">
+					<input type="radio" ng-model="tarea.prioridad" value="Baja"></input> Baja
+				</label>
+
+				<label class="radio-inline">
+					<input type="radio" ng-model="tarea.prioridad" value="Normal"></input> Normal
+				</label>
+
+				<label class="radio-inline">
+					<input type="radio" ng-model="tarea.prioridad" value="Alta"></input> Alta
+				</label>
+
+			</div>
+			<div class="text-center editBtn">
+				<button class="btn btn-success btn-sm" type="submit">Actualizar</button>
+				<button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
+			</div>
+		</form>
+		<div>
+			<a href="#">Regresar</a>
+		</div>
+	</div>
+		
+</body>
+</html>
