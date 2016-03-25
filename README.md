@@ -1,2 +1,2 @@
 # MEAN-App
-stack MEAN 
+Sistema CRUD basado en el stack MEAN JS
